@@ -1,0 +1,6 @@
+<%= @show.join(", ") %>
+<%= form_tag(:controller => "products" :action => "add", :method => "post"}) do %>
+  <%= text_field_tag "name", "name", placeholder: "item" %>
+<%= text_field_tag "price", "price", placeholder: "price", class: "class" %>
+<%= submit_tag "Save changes", :id => "submit", :name => "submit", :class => "form_submit", :disabled => false, :disable_with => "Please wait..." %>
+<% end %>

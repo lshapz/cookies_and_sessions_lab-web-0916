@@ -1,0 +1,5 @@
+<%= @cart.join(", ") %>  
+<%= form_tag({:controller => "products", :action => "add", :method => "post"}) do %>
+  <%= text_field_tag "product", "product", placeholder: "item" %>
+  <%= submit_tag "add to cart", :id => "add to cart", :name => "add to cart", :disabled => false, :disable_with => "Please wait..." %>
+<% end %>
